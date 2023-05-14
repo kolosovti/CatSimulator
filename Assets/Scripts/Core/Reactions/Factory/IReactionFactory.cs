@@ -1,7 +1,10 @@
+using CatSim.Configs;
+
 namespace CatSim.Core.Reactions.Factory
 {
     public interface IReactionFactory
     {
-        IReaction ProducePetReaction();
+        public IReaction ProduceReaction(ReactionConfig config, SequenceType sequenceType,
+            IReaction wrappedReaction = null);
     }
 }
