@@ -8,7 +8,7 @@ namespace CatSim.Core.Reactions.Factory
         public IReaction ProduceReaction(ReactionConfig config, SequenceType sequenceType,
             IReaction wrappedReaction = null)
         {
-            return new ScratchReaction(config as ScratchReactionConfig, sequenceType);
+            return new ScratchReaction(config as ScratchReactionConfig, sequenceType, wrappedReaction);
         }
     }
 }

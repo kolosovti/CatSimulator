@@ -8,7 +8,7 @@ namespace CatSim.Core.Reactions.Factory
         public IReaction ProduceReaction(ReactionConfig config, SequenceType sequenceType,
             IReaction wrappedReaction = null)
         {
-            return new JumpReaction(config as JumpReactionConfig, sequenceType);
+            return new JumpReaction(config as JumpReactionConfig, sequenceType, wrappedReaction);
         }
     }
 }

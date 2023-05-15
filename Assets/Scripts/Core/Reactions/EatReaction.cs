@@ -1,6 +1,5 @@
 using CatSim.Configs;
 using CatSim.Configs.Reactions;
-using UnityEngine;
 
 namespace CatSim.Core.Reactions
 {
@@ -9,7 +8,7 @@ namespace CatSim.Core.Reactions
         private EatReactionConfig _config;
 
         public EatReaction(EatReactionConfig config, SequenceType sequenceType, IReaction wrappedReaction = null) :
-            base(sequenceType, wrappedReaction)
+            base(config, sequenceType, wrappedReaction)
         {
             _config = config;
         }
@@ -17,7 +16,6 @@ namespace CatSim.Core.Reactions
         public override void React()
         {
             base.React();
-            Debug.Log("eat");
             ReactionComplete?.Invoke();
         }
     }

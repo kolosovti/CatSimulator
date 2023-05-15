@@ -12,18 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45b5184bc03e43f4685a0a393a94f1bd, type: 3}
   m_Name: PlayAction
   m_EditorClassIdentifier: 
-  Action: 0
+  Action: 1
   BadMoodReaction:
     ReactionsSequence:
     - Reaction: {fileID: 11400000, guid: 8988cb4f84374474e91f0f25687453e6, type: 2}
       SequenceType: 0
     InterruptionActions: []
-    MoodTransition: 0
+    MoodTransition: 1
   GoodMoodReaction:
-    ReactionsSequence: []
+    ReactionsSequence:
+    - Reaction: {fileID: 11400000, guid: c06ba4367afea9049bde8a459a6bd5a5, type: 2}
+      SequenceType: 0
     InterruptionActions: []
-    MoodTransition: 0
+    MoodTransition: 3
   ExcellentMoodReaction:
-    ReactionsSequence: []
+    ReactionsSequence:
+    - Reaction: {fileID: 11400000, guid: ffbd4a8f14692fb40963545a09722f5c, type: 2}
+      SequenceType: 0
     InterruptionActions: []
-    MoodTransition: 0
+    MoodTransition: 3

@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f82d478a63c6214eb1fca08e856a7a4, type: 3}
-  m_Name: GoCloseAction
+  m_Name: GoCloseWhenEatInBadMoodAction
   m_EditorClassIdentifier: 
-  Action: 0
+  Action: 5
   BadMoodReaction:
-    ReactionsSequence: []
+    ReactionsSequence:
+    - Reaction: {fileID: 11400000, guid: ef985f369876ced4d9d25d8487bf7604, type: 2}
+      SequenceType: 0
     InterruptionActions: []
-    MoodTransition: 0
+    MoodTransition: 1
   GoodMoodReaction:
     ReactionsSequence: []
     InterruptionActions: []

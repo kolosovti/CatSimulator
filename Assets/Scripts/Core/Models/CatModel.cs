@@ -1,4 +1,5 @@
 using CatSim.Core.Mood;
+using UnityEngine;
 
 namespace CatSim
 {
@@ -20,6 +21,7 @@ namespace CatSim
 
         public void SetMoodState(MoodState mood)
         {
+            Debug.Log($"New cat mood: {mood}, prev cat mood: {_mood}");
             _mood = mood;
         }
     }

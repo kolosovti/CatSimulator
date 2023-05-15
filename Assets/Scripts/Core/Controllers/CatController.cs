@@ -36,7 +36,7 @@ namespace CatSim.Core.Controllers
 
             _catService.SetMood(_moodStateFactory.ProduceMoodState(actionConfig));
 
-            foreach (var reactionsSequenceItem in reactionsConfig.ReactionsSequence)
+            foreach (var reactionsSequenceItem in reactionsConfig.ReactionsSequence.Reverse())
             {
                 reactions.Add(_reactionsFactory.ProduceReaction(
                     reactionsSequenceItem.Reaction,
@@ -44,10 +44,7 @@ namespace CatSim.Core.Controllers
                     reactions.LastOrDefault()));
             }
 
-            if (reactions.Count > 0)
-            {
-                reactions[0].React();
-            }
+            reactions.LastOrDefault()?.React();
         }
 
         public void Dispose()

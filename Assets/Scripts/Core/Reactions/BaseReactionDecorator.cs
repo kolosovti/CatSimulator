@@ -1,27 +1,33 @@
 using System;
 using CatSim.Configs;
+using UnityEngine;
 
 namespace CatSim.Core.Reactions
 {
     public class BaseReactionDecorator : IReaction, IDisposable
     {
+        private ReactionConfig _baseReactionConfig;
+
         protected Action ReactionComplete;
         protected IReaction WrappedReaction;
         protected SequenceType SequenceType;
 
-        public BaseReactionDecorator(SequenceType sequenceType, IReaction wrappedReaction = null)
+        public BaseReactionDecorator(ReactionConfig baseReactionConfig, SequenceType sequenceType,
+            IReaction wrappedReaction = null)
         {
+            _baseReactionConfig = baseReactionConfig;
             WrappedReaction = wrappedReaction;
-        }
-
-        //TODO: fix inversed reactions order, possible errors when mix join and append reactions types
-        public virtual void React()
-        {
+            SequenceType = sequenceType;
             if (SequenceType == SequenceType.Append)
             {
                 ReactionComplete += RunWrappedReaction;
             }
-            else
+        }
+
+        public virtual void React()
+        {
+            Debug.Log($"Reaction: {_baseReactionConfig.Reaction}, sequence type: {SequenceType}");
+            if (SequenceType == SequenceType.Join)
             {
                 RunWrappedReaction();
             }

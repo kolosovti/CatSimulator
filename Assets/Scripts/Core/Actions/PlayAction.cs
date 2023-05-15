@@ -1,5 +1,6 @@
 using System;
 using CatSim.Configs.Actions;
+using UnityEngine;
 
 namespace CatSim.Core.Actions
 {
@@ -14,7 +15,7 @@ namespace CatSim.Core.Actions
 
         public void DoAction()
         {
-            throw new NotImplementedException();
+            Debug.Log("User action performed: Play");
         }
     }
 }

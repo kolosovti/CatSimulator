@@ -15,15 +15,20 @@ MonoBehaviour:
   Action: 2
   BadMoodReaction:
     ReactionsSequence:
-    - Reaction: {fileID: 0}
+    - Reaction: {fileID: 11400000, guid: aeeac90bf19306d4cb442549f9645a5d, type: 2}
+      SequenceType: 0
+    InterruptionActions:
+    - {fileID: 11400000, guid: 0e41e5a41accf1b44be9722a36ebeae6, type: 2}
+    MoodTransition: 2
+  GoodMoodReaction:
+    ReactionsSequence:
+    - Reaction: {fileID: 11400000, guid: 82b03fd4f00f8f446bf3ba34491f881d, type: 2}
       SequenceType: 0
     InterruptionActions: []
-    MoodTransition: 0
-  GoodMoodReaction:
-    ReactionsSequence: []
-    InterruptionActions: []
-    MoodTransition: 0
+    MoodTransition: 3
   ExcellentMoodReaction:
-    ReactionsSequence: []
+    ReactionsSequence:
+    - Reaction: {fileID: 11400000, guid: 82b03fd4f00f8f446bf3ba34491f881d, type: 2}
+      SequenceType: 0
     InterruptionActions: []
-    MoodTransition: 0
+    MoodTransition: 3

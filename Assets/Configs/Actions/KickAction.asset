@@ -12,16 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3f9b838ad1e2704e9d18729f99d9dae, type: 3}
   m_Name: KickAction
   m_EditorClassIdentifier: 
-  Action: 0
+  Action: 4
   BadMoodReaction:
-    ReactionsSequence: []
+    ReactionsSequence:
+    - Reaction: {fileID: 11400000, guid: b8b03859e9be75b44a1004d503d60dda, type: 2}
+      SequenceType: 0
+    - Reaction: {fileID: 11400000, guid: 6d51e267e1d3654499e4fa5f3771ecab, type: 2}
+      SequenceType: 0
     InterruptionActions: []
-    MoodTransition: 0
+    MoodTransition: 1
   GoodMoodReaction:
-    ReactionsSequence: []
+    ReactionsSequence:
+    - Reaction: {fileID: 11400000, guid: 078c899de315f8148a9e9c1897fbd213, type: 2}
+      SequenceType: 0
+    - Reaction: {fileID: 11400000, guid: e2fe6ed863c7fba49ae39a73cf524f51, type: 2}
+      SequenceType: 0
     InterruptionActions: []
-    MoodTransition: 0
+    MoodTransition: 1
   ExcellentMoodReaction:
-    ReactionsSequence: []
+    ReactionsSequence:
+    - Reaction: {fileID: 11400000, guid: 078c899de315f8148a9e9c1897fbd213, type: 2}
+      SequenceType: 0
     InterruptionActions: []
-    MoodTransition: 0
+    MoodTransition: 1
