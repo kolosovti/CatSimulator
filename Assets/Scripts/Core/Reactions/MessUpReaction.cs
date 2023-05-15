@@ -18,6 +18,7 @@ namespace CatSim.Core.Reactions
         {
             base.React();
             Debug.Log("mess up");
+            ReactionComplete?.Invoke();
         }
     }
 }

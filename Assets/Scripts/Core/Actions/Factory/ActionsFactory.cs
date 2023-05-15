@@ -21,7 +21,7 @@ namespace CatSim.Core.Actions.Factory
                 case Action.GoClose:
                     return new GoCloseActionFactory().ProduceAction(config);
                 default:
-                    throw new Exception($"Factory for action {config.Action} not defined");
+                    throw new Exception($"Factory for action '{config.Action}' not defined");
             }
         }
     }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using CatSim.Configs.Actions;
+using CatSim.Core.Mood.Factory;
 using CatSim.Core.Reactions;
 using CatSim.Core.Reactions.Factory;
 using CatSim.System;
@@ -9,16 +10,20 @@ namespace CatSim.Core.Controllers
 {
     public class CatController
     {
-        private UserController _userController;
         private ICatModel _catModel;
+        private CatService _catService;
+        private UserController _userController;
         private IReactionFactory _reactionsFactory;
+        private IMoodStateFactory _moodStateFactory;
 
-        public CatController(UserController userController, ICatModel catModel, IReactionFactory reactionsFactory,
-            IFac)
+        public CatController(ICatModel catModel, CatService catService, UserController userController, 
+            IReactionFactory reactionsFactory, IMoodStateFactory moodStateFactory)
         {
             _catModel = catModel;
+            _catService = catService;
             _userController = userController;
             _reactionsFactory = reactionsFactory;
+            _moodStateFactory = moodStateFactory;
             _userController.UserActionPerformed += OnUserActionPerformed;
         }
 
@@ -28,6 +33,8 @@ namespace CatSim.Core.Controllers
             var reactionsConfig = actionConfig.GetReactionsByMood(_catModel.Mood);
             var reactions = new List<IReaction>();
 
+            _catService.SetMood(_moodStateFactory.ProduceMoodState(actionConfig));
+
             foreach (var reactionsSequenceItem in reactionsConfig.ReactionsSequence)
             {
                 reactions.Add(_reactionsFactory.ProduceReaction(
@@ -35,8 +42,6 @@ namespace CatSim.Core.Controllers
                     reactionsSequenceItem.SequenceType,
                     reactions.LastOrDefault()));
             }
-
-
 
             if (reactions.Count > 0)
             {

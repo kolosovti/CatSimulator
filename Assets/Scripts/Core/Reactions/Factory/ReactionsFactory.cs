@@ -44,7 +44,7 @@ namespace CatSim
                     factory = new WagTailReactionFactory();
                     break;
                 default:
-                    throw new Exception($"Factory for reaction {config.Reaction} not defined");
+                    throw new Exception($"Factory for reaction '{config.Reaction}' not defined");
             }
 
             return factory.ProduceReaction(config, sequenceType, wrappedReaction);
