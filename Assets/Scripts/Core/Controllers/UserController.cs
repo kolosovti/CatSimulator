@@ -1,6 +1,6 @@
-using System;
+using CatSim.Configs.Actions;
 using CatSim.Core.Actions.Factory;
-using Action = CatSim.Configs.Actions.Action;
+using CatSim.System;
 
 namespace CatSim.Core.Controllers
 {
@@ -8,7 +8,7 @@ namespace CatSim.Core.Controllers
     {
         private ActionsFactory _actionsFactory;
 
-        public Action<Action> UserActionPerformed;
+        public global::System.Action<Action> UserActionPerformed;
 
         public UserController(ActionsFactory actionsFactory)
         {
@@ -17,7 +17,8 @@ namespace CatSim.Core.Controllers
 
         public void DoAction(Action actionType)
         {
-            var action = _actionsFactory.ProduceAction(actionType);
+            var actionConfig = Services.Configs.Actions.GetActionConfig(actionType);
+            var action = _actionsFactory.ProduceAction(actionConfig);
             action.DoAction();
             UserActionPerformed?.Invoke(actionType);
         }

@@ -1,4 +1,6 @@
+using System;
 using CatSim.Configs.Reactions;
+using CatSim.Core.Mood;
 using UnityEngine;
 
 namespace CatSim.Configs.Actions
@@ -20,5 +22,20 @@ namespace CatSim.Configs.Actions
         public MoodDependentReaction BadMoodReaction;
         public MoodDependentReaction GoodMoodReaction;
         public MoodDependentReaction ExcellentMoodReaction;
+
+        public MoodDependentReaction GetReactionsByMood(MoodState state)
+        {
+            switch (state)
+            {
+                case MoodState.Bad:
+                    return BadMoodReaction;
+                case MoodState.Good:
+                    return GoodMoodReaction;
+                case MoodState.Excellent:
+                    return ExcellentMoodReaction;
+                default:
+                    throw new Exception($"Reactions for mood state '{state}' not defined!");
+            }
+        }
     }
 }

@@ -8,16 +8,16 @@ namespace CatSim.Core.Reactions
     {
         private WagTailReactionConfig _config;
 
-        public override void React()
-        {
-            Debug.Log("wag tail");
-            base.React();
-        }
-
         public WagTailReaction(WagTailReactionConfig config, SequenceType sequenceType,
             IReaction wrappedReaction = null) : base(sequenceType, wrappedReaction)
         {
             _config = config;
+        }
+
+        public override void React()
+        {
+            base.React();
+            Debug.Log("wag tail");
         }
     }
 }

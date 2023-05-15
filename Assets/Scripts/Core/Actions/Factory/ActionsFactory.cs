@@ -1,16 +1,14 @@
 using System;
-using CatSim.System;
+using CatSim.Configs.Actions;
 using Action = CatSim.Configs.Actions.Action;
 
 namespace CatSim.Core.Actions.Factory
 {
-    public class ActionsFactory
+    public class ActionsFactory : IActionFactory
     {
-        public IAction ProduceAction(Action action)
+        public IAction ProduceAction(ActionConfig config)
         {
-            var config = Services.Configs.Actions.GetActionConfig(action);
-
-            switch (action)
+            switch (config.Action)
             {
                 case Action.Pet:
                     return new PetActionFactory().ProduceAction(config);

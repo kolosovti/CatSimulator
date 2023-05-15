@@ -4,12 +4,11 @@ using UnityEngine;
 
 namespace CatSim.Core.Reactions
 {
-    public class ScratchReaction : BaseReactionDecorator
+    public class BiteReaction : BaseReactionDecorator
     {
-        private ScratchReactionConfig _config;
+        private BiteReactionConfig _config;
 
-        public ScratchReaction(ScratchReactionConfig config, SequenceType sequenceType,
-            IReaction wrappedReaction = null)
+        public BiteReaction(BiteReactionConfig config, SequenceType sequenceType, IReaction wrappedReaction = null)
             : base(sequenceType, wrappedReaction)
         {
             _config = config;
@@ -18,7 +17,7 @@ namespace CatSim.Core.Reactions
         public override void React()
         {
             base.React();
-            Debug.Log("scratch");
+            Debug.Log("bite");
         }
     }
 }

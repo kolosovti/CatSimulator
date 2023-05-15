@@ -16,8 +16,8 @@ namespace CatSim.Core.Reactions
 
         public override void React()
         {
-            Debug.Log("sit");
             base.React();
+            Debug.Log("sit");
         }
     }
 }
