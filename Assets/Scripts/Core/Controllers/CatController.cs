@@ -1,14 +1,15 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using CatSim.Configs.Actions;
 using CatSim.Core.Mood.Factory;
 using CatSim.Core.Reactions;
 using CatSim.Core.Reactions.Factory;
 using CatSim.System;
+using Action = CatSim.Configs.Actions.Action;
 
 namespace CatSim.Core.Controllers
 {
-    public class CatController
+    public class CatController : IDisposable
     {
         private ICatModel _catModel;
         private CatService _catService;
@@ -16,7 +17,7 @@ namespace CatSim.Core.Controllers
         private IReactionFactory _reactionsFactory;
         private IMoodStateFactory _moodStateFactory;
 
-        public CatController(ICatModel catModel, CatService catService, UserController userController, 
+        public CatController(ICatModel catModel, CatService catService, UserController userController,
             IReactionFactory reactionsFactory, IMoodStateFactory moodStateFactory)
         {
             _catModel = catModel;
@@ -47,6 +48,11 @@ namespace CatSim.Core.Controllers
             {
                 reactions[0].React();
             }
+        }
+
+        public void Dispose()
+        {
+            _userController.UserActionPerformed -= OnUserActionPerformed;
         }
     }
 }

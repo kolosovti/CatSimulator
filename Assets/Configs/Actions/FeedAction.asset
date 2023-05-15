@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a113af23e5c9a554e85255b77c000609, type: 3}
   m_Name: FeedAction
   m_EditorClassIdentifier: 
-  Action: 0
+  Action: 2
   BadMoodReaction:
-    ReactionsSequence: []
+    ReactionsSequence:
+    - Reaction: {fileID: 0}
+      SequenceType: 0
     InterruptionActions: []
     MoodTransition: 0
   GoodMoodReaction:

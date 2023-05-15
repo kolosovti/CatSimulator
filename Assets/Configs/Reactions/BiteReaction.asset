@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b39cd4962e7a634d9e4bc1bbd67854f, type: 3}
   m_Name: BiteReaction
   m_EditorClassIdentifier: 
-  Reaction: 0
+  Reaction: 8

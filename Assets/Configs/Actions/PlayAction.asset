@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Action: 0
   BadMoodReaction:
-    ReactionsSequence: []
+    ReactionsSequence:
+    - Reaction: {fileID: 11400000, guid: 8988cb4f84374474e91f0f25687453e6, type: 2}
+      SequenceType: 0
     InterruptionActions: []
     MoodTransition: 0
   GoodMoodReaction:

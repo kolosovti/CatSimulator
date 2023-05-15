@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f986f8776e217694e8195b4faeae6d1d, type: 3}
   m_Name: PurrReaction
   m_EditorClassIdentifier: 
-  Reaction: 0
-  InterruptionActions: []
+  Reaction: 3

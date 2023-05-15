@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4972ad734e942194692b740d2fcca563, type: 3}
   m_Name: FastEatReaction
   m_EditorClassIdentifier: 
-  Reaction: 0
+  Reaction: 1
   Duration: 0

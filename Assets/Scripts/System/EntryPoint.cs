@@ -6,6 +6,8 @@ namespace CatSim
 {
     public class EntryPoint : MonoBehaviour
     {
+        [SerializeField] private UserView _userView;
+
         private CatModel _catModel;
 
         private CatService _catService;
@@ -18,6 +20,7 @@ namespace CatSim
             CreateModels();
             CreateServices();
             CreateControllers();
+            ConnectView();
         }
 
         private void CreateModels()
@@ -35,11 +38,17 @@ namespace CatSim
             _userController = new UserController(new ActionsFactory());
 
             //TODO: extract to ContextManager, resolve controllers and services by GetController<T>, GetService<T>
-            _catController = new CatController(_catModel, 
-                _catService, 
-                _userController, 
+            _catController = new CatController(_catModel,
+                _catService,
+                _userController,
                 new ReactionsFactory(),
                 new MoodStateAbstractFactory(_catModel));
+        }
+
+        //TODO: extract to prefab and resolve by WindowManager 
+        private void ConnectView()
+        {
+            _userView.ConnectControllers(_userController);
         }
     }
 }

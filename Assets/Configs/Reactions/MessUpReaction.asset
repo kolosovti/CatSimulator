@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 236828d4db47ce64da7cd9bffa53fddc, type: 3}
   m_Name: MessUpReaction
   m_EditorClassIdentifier: 
-  Reaction: 0
+  Reaction: 10

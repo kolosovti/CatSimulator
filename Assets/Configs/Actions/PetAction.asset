@@ -12,16 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3af283ba099b7949b8e12bb669492a0, type: 3}
   m_Name: PetAction
   m_EditorClassIdentifier: 
-  Action: 0
+  Action: 3
   BadMoodReaction:
-    ReactionsSequence: []
+    ReactionsSequence:
+    - Reaction: {fileID: 11400000, guid: ef985f369876ced4d9d25d8487bf7604, type: 2}
+      SequenceType: 0
     InterruptionActions: []
-    MoodTransition: 0
+    MoodTransition: 1
   GoodMoodReaction:
-    ReactionsSequence: []
+    ReactionsSequence:
+    - Reaction: {fileID: 11400000, guid: 6eb0eaa6b50f1dc4fb06b688b522a864, type: 2}
+      SequenceType: 0
     InterruptionActions: []
-    MoodTransition: 0
+    MoodTransition: 3
   ExcellentMoodReaction:
-    ReactionsSequence: []
+    ReactionsSequence:
+    - Reaction: {fileID: 11400000, guid: 6eb0eaa6b50f1dc4fb06b688b522a864, type: 2}
+      SequenceType: 1
+    - Reaction: {fileID: 11400000, guid: 44bd9858ad45ba645ae121e901fa1d44, type: 2}
+      SequenceType: 1
     InterruptionActions: []
-    MoodTransition: 0
+    MoodTransition: 3

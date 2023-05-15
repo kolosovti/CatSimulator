@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3ca2bf4824164c439b67c84fc909fc9, type: 3}
   m_Name: FastFollowTargetReaction
   m_EditorClassIdentifier: 
-  Reaction: 0
+  Reaction: 2
   RunSpeed: 0

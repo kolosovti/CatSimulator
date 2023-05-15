@@ -14,6 +14,7 @@ namespace CatSim.Core.Reactions
             WrappedReaction = wrappedReaction;
         }
 
+        //TODO: fix inversed reactions order, possible errors when mix join and append reactions types
         public virtual void React()
         {
             if (SequenceType == SequenceType.Append)

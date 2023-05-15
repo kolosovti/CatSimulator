@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88576c9d98802e24c904b5d45351d98e, type: 3}
   m_Name: RunToTargetReaction
   m_EditorClassIdentifier: 
-  Reaction: 0
+  Reaction: 9

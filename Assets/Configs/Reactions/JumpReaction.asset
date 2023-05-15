@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7be0cc05d251c544a8171f8a1276f1c, type: 3}
   m_Name: JumpReaction
   m_EditorClassIdentifier: 
-  Reaction: 0
+  Reaction: 7

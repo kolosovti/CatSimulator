@@ -13,6 +13,11 @@ namespace CatSim
 
         MoodState ICatModel.Mood => _mood;
 
+        public CatModel()
+        {
+            _mood = MoodState.Good;
+        }
+
         public void SetMoodState(MoodState mood)
         {
             _mood = mood;

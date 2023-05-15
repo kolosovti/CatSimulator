@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b85cbca32da0c994ebb9ee6ac0ce1150, type: 3}
   m_Name: ScratchReaction
   m_EditorClassIdentifier: 
-  Reaction: 0
-  InterruptionActions: []
+  Reaction: 4

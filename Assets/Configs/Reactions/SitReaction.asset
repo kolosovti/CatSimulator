@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b72fb89dc53ce94299da811d52eeba6, type: 3}
   m_Name: SitReaction
   m_EditorClassIdentifier: 
-  Reaction: 0
-  InterruptionActions: []
+  Reaction: 5
