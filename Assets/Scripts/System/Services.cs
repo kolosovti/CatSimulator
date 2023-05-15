@@ -1,7 +1,7 @@
 using CatSim.Configs;
 using UnityEngine;
 
-namespace CatSim.Tools
+namespace CatSim.System
 {
     public static class Services
     {

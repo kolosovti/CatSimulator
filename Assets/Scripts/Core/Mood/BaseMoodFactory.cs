@@ -1,5 +1,5 @@
 using CatSim.Configs.Actions;
-using CatSim.Tools;
+using CatSim.System;
 
 namespace CatSim.Core.Mood.Factory
 {

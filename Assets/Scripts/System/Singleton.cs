@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace CatSim.Tools
+namespace CatSim.System
 {
     public class Singleton<T> : MonoBehaviour
     {
